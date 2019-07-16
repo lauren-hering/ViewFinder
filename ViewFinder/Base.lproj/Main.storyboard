@@ -48,7 +48,7 @@
         <!--Add New Photo-->
         <scene sceneID="f92-yl-B3d">
             <objects>
-                <viewController id="TbJ-AO-4ft" sceneMemberID="viewController">
+                <viewController id="TbJ-AO-4ft" customClass="AddPhotoViewController" customModule="ViewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KEu-T7-Cda">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,16 +57,25 @@
                                 <rect key="frame" x="281" y="433" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="takeSelfieTapped:" destination="TbJ-AO-4ft" eventType="touchUpInside" id="Aje-QY-vTK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIC-Hf-QMR">
                                 <rect key="frame" x="54" y="433" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="libraryButtonTapped:" destination="TbJ-AO-4ft" eventType="touchUpInside" id="dHd-da-QmK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhh-cD-LSx">
                                 <rect key="frame" x="181" y="499" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Albums"/>
+                                <connections>
+                                    <action selector="albumsButtonTappedWithSender:" destination="TbJ-AO-4ft" eventType="touchUpInside" id="agh-eX-okt"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="KEl-SR-D6u">
                                 <rect key="frame" x="33" y="133" width="349" height="241"/>
@@ -89,6 +98,9 @@
                         <viewLayoutGuide key="safeArea" id="GJl-Es-7lQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo" id="BzJ-QH-sOM"/>
+                    <connections>
+                        <outlet property="imageView" destination="KEl-SR-D6u" id="0Vi-oP-qyx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Dh-01-rub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
