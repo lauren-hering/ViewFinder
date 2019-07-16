@@ -55,8 +55,8 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
                        photoToSave.imageData = userImageData
                   }
             }
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-        navigationController?.popViewController(animated: true)
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            navigationController?.popViewController(animated: true)
         }
     }
     
